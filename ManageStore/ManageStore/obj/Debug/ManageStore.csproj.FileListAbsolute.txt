@@ -1,0 +1,40 @@
+D:\C#\ManageStore\ManageStore\bin\Debug\ManageStore.exe.config
+D:\C#\ManageStore\ManageStore\bin\Debug\ManageStore.exe
+D:\C#\ManageStore\ManageStore\bin\Debug\ManageStore.pdb
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.csprojAssemblyReference.cache
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fLogin.resources
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.Properties.Resources.resources
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.GenerateResource.cache
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.exe
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.pdb
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fTableManager.resources
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fAccountProfile.resources
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fAdmin.resources
+D:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.CoreCompileInputs.cache
+E:\C#\ManageStore\ManageStore\bin\Debug\ManageStore.exe.config
+E:\C#\ManageStore\ManageStore\bin\Debug\ManageStore.exe
+E:\C#\ManageStore\ManageStore\bin\Debug\ManageStore.pdb
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.csprojAssemblyReference.cache
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fAccountProfile.resources
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fAdmin.resources
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fLogin.resources
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.fTableManager.resources
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.Properties.Resources.resources
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.GenerateResource.cache
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.CoreCompileInputs.cache
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.exe
+E:\C#\ManageStore\ManageStore\obj\Debug\ManageStore.pdb
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.csprojAssemblyReference.cache
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.fAccountProfile.resources
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.fAdmin.resources
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.fLogin.resources
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.fTableManager.resources
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.Properties.Resources.resources
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.GenerateResource.cache
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.CoreCompileInputs.cache
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.exe
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.pdb
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\bin\Debug\ManageStore.exe.config
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\bin\Debug\ManageStore.exe
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\bin\Debug\ManageStore.pdb
+E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.fSaler.resources
