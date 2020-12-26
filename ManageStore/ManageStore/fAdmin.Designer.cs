@@ -59,7 +59,7 @@
             this.btnEditFood = new System.Windows.Forms.Button();
             this.btnAddFood = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dtgvFood = new System.Windows.Forms.DataGridView();
+            this.dtgvProduct = new System.Windows.Forms.DataGridView();
             this.tpFoodCategory = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -74,7 +74,7 @@
             this.btnEditCategory = new System.Windows.Forms.Button();
             this.btnAddCategory = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.dtgvCategory = new System.Windows.Forms.DataGridView();
+            this.dtgvCus = new System.Windows.Forms.DataGridView();
             this.tpTable = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -92,7 +92,7 @@
             this.btnEditTable = new System.Windows.Forms.Button();
             this.btnAddTable = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.dtgvTable = new System.Windows.Forms.DataGridView();
+            this.dtgvInventory = new System.Windows.Forms.DataGridView();
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel22 = new System.Windows.Forms.Panel();
             this.btnResetPassWord = new System.Windows.Forms.Button();
@@ -127,14 +127,14 @@
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).BeginInit();
             this.tpFoodCategory.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCus)).BeginInit();
             this.tpTable.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -142,7 +142,7 @@
             this.panel14.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvInventory)).BeginInit();
             this.tpAccount.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -216,7 +216,6 @@
             this.btnViewBill.TabIndex = 2;
             this.btnViewBill.Text = "Thống kê";
             this.btnViewBill.UseVisualStyleBackColor = true;
-            //this.btnViewBill.Click += new System.EventHandler(this.btnViewBill_Click);
             // 
             // dtpkToDate
             // 
@@ -444,21 +443,21 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dtgvFood);
+            this.panel3.Controls.Add(this.dtgvProduct);
             this.panel3.Location = new System.Drawing.Point(6, 75);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 397);
             this.panel3.TabIndex = 0;
             // 
-            // dtgvFood
+            // dtgvProduct
             // 
-            this.dtgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvFood.Location = new System.Drawing.Point(4, 4);
-            this.dtgvFood.Name = "dtgvFood";
-            this.dtgvFood.RowHeadersWidth = 51;
-            this.dtgvFood.RowTemplate.Height = 24;
-            this.dtgvFood.Size = new System.Drawing.Size(413, 390);
-            this.dtgvFood.TabIndex = 0;
+            this.dtgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvProduct.Location = new System.Drawing.Point(4, 4);
+            this.dtgvProduct.Name = "dtgvProduct";
+            this.dtgvProduct.RowHeadersWidth = 51;
+            this.dtgvProduct.RowTemplate.Height = 24;
+            this.dtgvProduct.Size = new System.Drawing.Size(413, 390);
+            this.dtgvProduct.TabIndex = 0;
             // 
             // tpFoodCategory
             // 
@@ -583,21 +582,21 @@
             // 
             // panel18
             // 
-            this.panel18.Controls.Add(this.dtgvCategory);
+            this.panel18.Controls.Add(this.dtgvCus);
             this.panel18.Location = new System.Drawing.Point(6, 75);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(420, 397);
             this.panel18.TabIndex = 4;
             // 
-            // dtgvCategory
+            // dtgvCus
             // 
-            this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCategory.Location = new System.Drawing.Point(4, 4);
-            this.dtgvCategory.Name = "dtgvCategory";
-            this.dtgvCategory.RowHeadersWidth = 51;
-            this.dtgvCategory.RowTemplate.Height = 24;
-            this.dtgvCategory.Size = new System.Drawing.Size(413, 390);
-            this.dtgvCategory.TabIndex = 0;
+            this.dtgvCus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCus.Location = new System.Drawing.Point(4, 4);
+            this.dtgvCus.Name = "dtgvCus";
+            this.dtgvCus.RowHeadersWidth = 51;
+            this.dtgvCus.RowTemplate.Height = 24;
+            this.dtgvCus.Size = new System.Drawing.Size(413, 390);
+            this.dtgvCus.TabIndex = 0;
             // 
             // tpTable
             // 
@@ -749,21 +748,21 @@
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.dtgvTable);
+            this.panel20.Controls.Add(this.dtgvInventory);
             this.panel20.Location = new System.Drawing.Point(6, 75);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(420, 397);
             this.panel20.TabIndex = 7;
             // 
-            // dtgvTable
+            // dtgvInventory
             // 
-            this.dtgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTable.Location = new System.Drawing.Point(4, 4);
-            this.dtgvTable.Name = "dtgvTable";
-            this.dtgvTable.RowHeadersWidth = 51;
-            this.dtgvTable.RowTemplate.Height = 24;
-            this.dtgvTable.Size = new System.Drawing.Size(413, 390);
-            this.dtgvTable.TabIndex = 0;
+            this.dtgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvInventory.Location = new System.Drawing.Point(4, 4);
+            this.dtgvInventory.Name = "dtgvInventory";
+            this.dtgvInventory.RowHeadersWidth = 51;
+            this.dtgvInventory.RowTemplate.Height = 24;
+            this.dtgvInventory.Size = new System.Drawing.Size(413, 390);
+            this.dtgvInventory.TabIndex = 0;
             // 
             // tpAccount
             // 
@@ -971,7 +970,7 @@
             this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).EndInit();
             this.tpFoodCategory.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
@@ -980,7 +979,7 @@
             this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCus)).EndInit();
             this.tpTable.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
@@ -991,7 +990,7 @@
             this.panel14.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvInventory)).EndInit();
             this.tpAccount.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
@@ -1030,7 +1029,7 @@
         private System.Windows.Forms.Button btnEditFood;
         private System.Windows.Forms.Button btnAddFood;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dtgvFood;
+        private System.Windows.Forms.DataGridView dtgvProduct;
         private System.Windows.Forms.TextBox tbSearchFoodName;
         private System.Windows.Forms.Button btnSearchFood;
         private System.Windows.Forms.Panel panel7;
@@ -1058,7 +1057,7 @@
         private System.Windows.Forms.Button btnEditCategory;
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.DataGridView dtgvCategory;
+        private System.Windows.Forms.DataGridView dtgvCus;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.ComboBox cbTableStatus;
@@ -1075,7 +1074,7 @@
         private System.Windows.Forms.Button btnEditTable;
         private System.Windows.Forms.Button btnAddTable;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.DataGridView dtgvTable;
+        private System.Windows.Forms.DataGridView dtgvInventory;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Button btnResetPassWord;
         private System.Windows.Forms.Panel panel23;

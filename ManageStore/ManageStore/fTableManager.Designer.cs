@@ -52,6 +52,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.nhânViênKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,7 +68,8 @@
             this.adminToolStripMenuItem,
             this.thôngTinTàiKhoảnToolStripMenuItem,
             this.kháchBánToolStripMenuItem,
-            this.kháchMuaToolStripMenuItem});
+            this.kháchMuaToolStripMenuItem,
+            this.nhânViênKhoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1142, 28);
@@ -275,6 +277,12 @@
             this.flpTable.Size = new System.Drawing.Size(560, 461);
             this.flpTable.TabIndex = 5;
             // 
+            // nhânViênKhoToolStripMenuItem
+            // 
+            this.nhânViênKhoToolStripMenuItem.Name = "nhânViênKhoToolStripMenuItem";
+            this.nhânViênKhoToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.nhânViênKhoToolStripMenuItem.Text = "Nhân viên kho";
+            // 
             // fTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,5 +335,6 @@
         private System.Windows.Forms.TextBox txbTotalPrice;
         private System.Windows.Forms.ToolStripMenuItem kháchBánToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kháchMuaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhânViênKhoToolStripMenuItem;
     }
 }

@@ -80,7 +80,9 @@ namespace ManageStore.DAO
         }
         public bool InsertProduct(string name, int id, float price)
         {
-            string query = string.Format("INSERT dbo.SANPHAM ( name, idCategory, price )VALUES  ( N'{0}', {1}, {2})", name, id, price);
+            
+            //string query = string.Format("INSERT dbo.SANPHAM ( name, idCategory, price )VALUES  ( N'{0}', {1}, {2})", name, id, price);
+            string query = string.Format("INSERT dbo.SANPHAM (IDDANHMUC, TENSP, MOTASP, ANHSP,VIDEOSP,THUONGHIEU,GIASP,MASKU,TINHTRANG_)VALUES({0},  N'{1}',  '',   '',  '',  '',  {2},  '',  0)", id, name, price);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

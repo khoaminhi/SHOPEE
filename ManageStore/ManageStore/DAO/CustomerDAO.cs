@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageStore.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -19,5 +20,19 @@ namespace ManageStore.DAO
         }
 
         private CustomerDAO() { }
+        public List<Customer> GetListCustomer()
+        {
+            List<Customer> list = new List<Customer>();
+            string query = "select * from KHACHHANG";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Customer customer = new Customer(item);
+                list.Add(customer);
+            }
+
+            return list;
+        }
     }
 }

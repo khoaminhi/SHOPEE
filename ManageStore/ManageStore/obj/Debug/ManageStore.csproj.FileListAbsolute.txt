@@ -38,3 +38,17 @@ E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\bin\Debug\Manag
 E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\bin\Debug\ManageStore.exe
 E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\bin\Debug\ManageStore.pdb
 E:\LEARN\HK1_III\Database Advance\Shopee\ManageStore\ManageStore\obj\Debug\ManageStore.fSaler.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\bin\Debug\ManageStore.exe.config
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\bin\Debug\ManageStore.exe
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\bin\Debug\ManageStore.pdb
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.csprojAssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fAccountProfile.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fAdmin.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fLogin.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fSaler.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fTableManager.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.Properties.Resources.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.exe
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.pdb

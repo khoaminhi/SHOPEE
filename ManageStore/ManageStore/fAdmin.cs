@@ -17,6 +17,8 @@ namespace ManageStore
     {
         BindingSource productList = new BindingSource();
         BindingSource accountList = new BindingSource();
+        BindingSource customerList = new BindingSource();
+        BindingSource inventoryList = new BindingSource();
 
         public Account loginAccount;
         public fAdmin()
@@ -27,13 +29,16 @@ namespace ManageStore
         }
         void Load()
         {
-            dtgvFood.DataSource = productList;
+            dtgvProduct.DataSource = productList;
             dtgvAccount.DataSource = accountList;
-
+            dtgvCus.DataSource = customerList;
+            dtgvInventory.DataSource = inventoryList;
             LoadDateTimePickerBill();
             //LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
             LoadListProduct();
+            LoadListCustomer();
             LoadAccount();
+            LoadListInventory();
             AddAccountBinding();
             LoadCategoryIntoCombobox(cbFoodCategory);
             AddFoodBinding();
@@ -70,11 +75,19 @@ namespace ManageStore
         {
             productList.DataSource = ProductDAO.Instance.GetListProduct();
         }
+        void LoadListCustomer()
+        {
+            customerList.DataSource = CustomerDAO.Instance.GetListCustomer();
+        }
+        void LoadListInventory()
+        {
+            inventoryList.DataSource = InventoryDAO.Instance.GetListInventory();
+        }
         void AddFoodBinding()
         {
-            tbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "name",true,DataSourceUpdateMode.Never));
-            txbFoodID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Price", true, DataSourceUpdateMode.Never));
+            tbFoodName.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "name",true,DataSourceUpdateMode.Never));
+            txbFoodID.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "ID", true, DataSourceUpdateMode.Never));
+            nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvProduct.DataSource, "Price", true, DataSourceUpdateMode.Never));
             
         }
 
@@ -156,9 +169,9 @@ namespace ManageStore
         {
             try
             {
-                if (dtgvFood.SelectedCells.Count > 0)
+                if (dtgvProduct.SelectedCells.Count > 0)
                 {
-                    int id = (int)dtgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
+                    int id = (int)dtgvProduct.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
 
                     Category cateogory = CategoryDAO.Instance.GetCategoryByID(id);
 
@@ -183,18 +196,37 @@ namespace ManageStore
 
         }
 
+        //private void btnAddFood_Click(object sender, EventArgs e)
+        //{
+        //    string name = tbFoodName.Text;
+        //    int categoryID = (cbFoodCategory.SelectedItem as Category).ID;
+        //    float price = (float)nmFoodPrice.Value;
+
+        //    if (FoodDAO.Instance.InsertFood(name, categoryID, price))
+        //    {
+        //        MessageBox.Show("Thêm món thành công");
+        //        LoadListProduct();
+        //        if (insertFood != null)
+        //            insertFood(this, new EventArgs());
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Có lỗi khi thêm thức ăn");
+        //    }
+
+        //}
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             string name = tbFoodName.Text;
             int categoryID = (cbFoodCategory.SelectedItem as Category).ID;
             float price = (float)nmFoodPrice.Value;
 
-            if (FoodDAO.Instance.InsertFood(name, categoryID, price))
+            if (ProductDAO.Instance.InsertProduct(name, categoryID, price))
             {
                 MessageBox.Show("Thêm món thành công");
                 LoadListProduct();
-                if (insertFood != null)
-                    insertFood(this, new EventArgs());
+                if (insertProduct != null)
+                    insertProduct(this, new EventArgs());
             }
             else
             {
@@ -246,6 +278,12 @@ namespace ManageStore
         {
             add { insertFood += value; }
             remove { insertFood -= value; }
+        }
+        private event EventHandler insertProduct;
+        public event EventHandler InsertProduct
+        {
+            add { insertProduct += value; }
+            remove { insertProduct -= value; }
         }
 
         private event EventHandler deleteFood;
