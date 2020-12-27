@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageStore", "ManageStore\ManageStore.csproj", "{3DB4ED5C-808B-4AE6-933B-81DE3DDF1580}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopee", "ManageStore\Shopee.csproj", "{3DB4ED5C-808B-4AE6-933B-81DE3DDF1580}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

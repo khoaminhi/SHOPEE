@@ -119,6 +119,7 @@ namespace ManageStore
             this.dtgvBill.RowTemplate.Height = 24;
             this.dtgvBill.Size = new System.Drawing.Size(825, 429);
             this.dtgvBill.TabIndex = 0;
+            this.dtgvBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvBill_CellContentClick);
             // 
             // panel1
             // 

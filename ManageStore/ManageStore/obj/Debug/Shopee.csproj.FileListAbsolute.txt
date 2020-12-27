@@ -1,0 +1,14 @@
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\bin\Debug\ManageStore.exe.config
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\bin\Debug\ManageStore.exe
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\bin\Debug\ManageStore.pdb
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\Shopee.csprojAssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fAccountProfile.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fAdmin.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fLogin.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fSaler.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.fTableManager.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.Properties.Resources.resources
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\Shopee.csproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\Shopee.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.exe
+C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.pdb
