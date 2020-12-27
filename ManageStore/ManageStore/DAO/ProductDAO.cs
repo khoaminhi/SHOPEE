@@ -67,7 +67,7 @@ namespace ManageStore.DAO
         public List<Product> SearchProductByName(string name)
         {
             List<Product> list = new List<Product>();
-            string query = string.Format("SELECT * FROM dbo.SANPHAM WHERE dbo.GetUnsignString(name) LIKE N'%' + dbo.GetUnsignString(N'{0}') + '%'", name);
+            string query = string.Format("SELECT * FROM dbo.SANPHAM WHERE dbo.GetUnsignString(TENSP) LIKE N'%' + dbo.GetUnsignString(N'{0}') + '%'", name);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
@@ -78,11 +78,11 @@ namespace ManageStore.DAO
 
             return list;
         }
-        public bool InsertProduct(string name, int id, float price)
+        public bool InsertProduct(int id,string name,string mota,string anh,string video,string thuonghieu ,float price,string masku,int tinhtrang)
         {
             
             //string query = string.Format("INSERT dbo.SANPHAM ( name, idCategory, price )VALUES  ( N'{0}', {1}, {2})", name, id, price);
-            string query = string.Format("INSERT dbo.SANPHAM (IDDANHMUC, TENSP, MOTASP, ANHSP,VIDEOSP,THUONGHIEU,GIASP,MASKU,TINHTRANG_)VALUES({0},  N'{1}',  '',   '',  '',  '',  {2},  '',  0)", id, name, price);
+            string query = string.Format("EXEC USP_InsertProduct {0}, '{1}','{2}' ,'{3}' ,'{4}' ,'{5}' ,{6} ,'{7}' ,{8} ", new object[] { id, name, mota, anh, video, thuonghieu, price, masku, tinhtrang });
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -98,7 +98,7 @@ namespace ManageStore.DAO
         {
             BillInfoDAO.Instance.DeleteBillInfoByProductID(idProduct);
 
-            string query = string.Format("Delete SANPHAM where id = {0}", idProduct);
+            string query = string.Format("exec usp_deleteproduct {0}", idProduct);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

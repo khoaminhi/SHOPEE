@@ -30,10 +30,10 @@ begin TRAN
 commit tran
 go
 
-/*EXEC dbo.sp_themKhachHang @ten = 'abc',                -- varchar(40)
-                          @gioi = 'nam',               -- varchar(3)
+/*EXEC dbo.sp_themKhachHang @ten = 'xyz',                -- varchar(40)
+                          @gioi = 'nu',               -- varchar(3)
                           @ngaysinh = '2020-12-27', -- date
-                          @email = 'minhkhoa031099@gmail.com',              -- varchar(40)
+                          @email = 'khoa031099@gmail.com',              -- varchar(40)
                           @dt = '0336069400',                 -- char(10)
                           @tk = NULL                  -- varchar(16)
 GO

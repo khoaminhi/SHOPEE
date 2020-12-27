@@ -19,7 +19,7 @@ namespace ManageStore
 {
     public partial class fTableManager : Form
     {
-        private object cbFood;
+        
         private Account loginAccount;
 
         public Account LoginAccount { get => loginAccount; set { loginAccount = value; ChangeAccount(loginAccount.Type); } }
@@ -34,8 +34,6 @@ namespace ManageStore
                 LoadListProduct();
                 //LoadCategory();
             }
-
-
         }
 
        
@@ -98,7 +96,6 @@ namespace ManageStore
                 btn.Click += btn_Click;
                 btn.Tag = item;
 
-   
                 flpTable.Controls.Add(btn);
             }
         }
@@ -235,17 +232,17 @@ namespace ManageStore
             Customer cus = lsvBill.Tag as Customer;
                 
             int idBill = BillDAO.Instance.GetUnCheckBillIDByCustomerID(1);
-            int foodID = (comboBox2.SelectedItem as Food).ID;
+            int productID = (comboBox2.SelectedItem as Product).ID;
             int count =(int) nmFoodCount.Value;
             if (count != 0) {
                 if (idBill == -1)
                 {
                     BillDAO.Instance.InsertBill(cus.ID);
-                    BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
+                    BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), productID, count);
                 }
                 else
                 {
-                    BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
+                    BillInfoDAO.Instance.InsertBillInfo(idBill, productID, count);
                 }
             }
             
@@ -262,12 +259,11 @@ namespace ManageStore
             double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
             if(idBill!=-1)
             {
-                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\n Tổng tiền - (Tổng tiền/100) x Giảm giá\n = {1} - ({1} / 100) x {2} = {3}", 1 , totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn \n Tổng tiền - (Tổng tiền/100) x Giảm giá\n = {1} - ({1} / 100) x {2} = {3}", 1 , totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     BillDAO.Instance.CheckOut(idBill,  (float)finalTotalPrice);
                     showBill(1);
-
-                    lsvBill.Items.Clear();
+                    lsvBill.Items.Clear();             
                 }
             }    
         }

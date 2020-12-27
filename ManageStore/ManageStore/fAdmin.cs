@@ -40,8 +40,9 @@ namespace ManageStore
             LoadAccount();
             LoadListInventory();
             AddAccountBinding();
-            LoadCategoryIntoCombobox(cbFoodCategory);
+            //LoadCategoryIntoCombobox(cbCategory);
             AddFoodBinding();
+            //AddInventoryBinding();
         }
         #region methods
         void AddAccountBinding()
@@ -60,6 +61,18 @@ namespace ManageStore
             List<Product> listProduct = ProductDAO.Instance.SearchProductByName(name);
 
             return listProduct;
+        }
+        List<Customer> SearchCustomerByName(string name)
+        {
+            List<Customer> listCustomer = CustomerDAO.Instance.SearchCustomerByName(name);
+
+            return listCustomer;
+        }
+        List<Inventory> SearchInventoryByName(string name)
+        {
+            List<Inventory> listInventory = InventoryDAO.Instance.SearchInventoryByName(name);
+
+            return listInventory;
         }
         void LoadDateTimePickerBill()
         {
@@ -85,11 +98,18 @@ namespace ManageStore
         }
         void AddFoodBinding()
         {
-            tbFoodName.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "name",true,DataSourceUpdateMode.Never));
+            tbName.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "name",true,DataSourceUpdateMode.Never));
             txbFoodID.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvProduct.DataSource, "Price", true, DataSourceUpdateMode.Never));
+            nmPrice.DataBindings.Add(new Binding("Value", dtgvProduct.DataSource, "Price", true, DataSourceUpdateMode.Never));
             
         }
+        //void AddInventoryBinding()
+        //{
+        //    tbInvName.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "TENKHO", true, DataSourceUpdateMode.Never));
+        //    nmIDStaff.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "IDNV", true, DataSourceUpdateMode.Never));
+        //    tbInvAdr.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "DIACHIKHO", true, DataSourceUpdateMode.Never));
+
+        //}
 
         void LoadCategoryIntoCombobox(ComboBox cb)
         {
@@ -165,36 +185,36 @@ namespace ManageStore
             {
             LoadListProduct();
             }
-        private void txbFoodID_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (dtgvProduct.SelectedCells.Count > 0)
-                {
-                    int id = (int)dtgvProduct.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
+        //private void txbFoodID_TextChanged(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (dtgvProduct.SelectedCells.Count > 0)
+        //        {
+        //            int id = (int)dtgvProduct.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
 
-                    Category cateogory = CategoryDAO.Instance.GetCategoryByID(id);
+        //            Category cateogory = CategoryDAO.Instance.GetCategoryByID(id);
 
-                    cbFoodCategory.SelectedItem = cateogory;
+        //            cbCategory.SelectedItem = cateogory;
 
-                    int index = -1;
-                    int i = 0;
-                    foreach (Category item in cbFoodCategory.Items)
-                    {
-                        if (item.ID == cateogory.ID)
-                        {
-                            index = i;
-                            break;
-                        }
-                        i++;
-                    }
+        //            int index = -1;
+        //            int i = 0;
+        //            foreach (Category item in cbCategory.Items)
+        //            {
+        //                if (item.ID == cateogory.ID)
+        //                {
+        //                    index = i;
+        //                    break;
+        //                }
+        //                i++;
+        //            }
 
-                    cbFoodCategory.SelectedIndex = index;
-                }
-            }
-            catch { }
+        //            cbCategory.SelectedIndex = index;
+        //        }
+        //    }
+        //    catch { }
 
-        }
+        //}
 
         //private void btnAddFood_Click(object sender, EventArgs e)
         //{
@@ -217,41 +237,45 @@ namespace ManageStore
         //}
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            string name = tbFoodName.Text;
-            int categoryID = (cbFoodCategory.SelectedItem as Category).ID;
-            float price = (float)nmFoodPrice.Value;
+            string name = tbName.Text;
+            int categoryID = (int)nmIDDM.Value;
+            float price = (float)nmPrice.Value;
+            string mota = tbDes.Text;
+            string anh = tbPic.Text;
+            string thuonghieu = tbBrand.Text;
+            int tinhtrang = (int)numericTT.Value;
 
-            if (ProductDAO.Instance.InsertProduct(name, categoryID, price))
+            if (ProductDAO.Instance.InsertProduct(categoryID, name, mota,anh,null,thuonghieu,price,null,tinhtrang))
             {
-                MessageBox.Show("Thêm món thành công");
+                MessageBox.Show("Thêm thành công");
                 LoadListProduct();
                 if (insertProduct != null)
                     insertProduct(this, new EventArgs());
             }
             else
             {
-                MessageBox.Show("Có lỗi khi thêm thức ăn");
+                MessageBox.Show("Có lỗi khi thêm");
             }
 
         }
 
         private void btnEditFood_Click(object sender, EventArgs e)
         {
-            string name = tbFoodName.Text;
-            int categoryID = (cbFoodCategory.SelectedItem as Category).ID;
-            float price = (float)nmFoodPrice.Value;
+            string name = tbName.Text;
+            int categoryID = (int)nmIDDM.Value;
+            float price = (float)nmPrice.Value;
             int id = Convert.ToInt32(txbFoodID.Text);
 
-            if (FoodDAO.Instance.UpdateFood(id, name, categoryID, price))
+            if (ProductDAO.Instance.UpdateProduct(id, name, categoryID, price))
             {
-                MessageBox.Show("Sửa món thành công");
+                MessageBox.Show("Sửa thành công");
                 LoadListProduct();
-                if (updateFood != null)
-                    updateFood(this, new EventArgs());
+                if (updateProduct != null)
+                    updateProduct(this, new EventArgs());
             }
             else
             {
-                MessageBox.Show("Có lỗi khi sửa thức ăn");
+                MessageBox.Show("Có lỗi khi sửa");
             }
 
         }
@@ -260,16 +284,16 @@ namespace ManageStore
         {
             int id = Convert.ToInt32(txbFoodID.Text);
 
-            if (FoodDAO.Instance.DeleteFood(id))
+            if (ProductDAO.Instance.DeleteProduct(id))
             {
-                MessageBox.Show("Xóa món thành công");
+                MessageBox.Show("Xóa thành công");
                 LoadListProduct();
-                if (deleteFood != null)
-                    deleteFood(this, new EventArgs());
+                if (deleteProduct != null)
+                    deleteProduct(this, new EventArgs());
             }
             else
             {
-                MessageBox.Show("Có lỗi khi xóa thức ăn");
+                MessageBox.Show("Có lỗi khi xóa");
             }
         }
 
@@ -285,6 +309,12 @@ namespace ManageStore
             add { insertProduct += value; }
             remove { insertProduct -= value; }
         }
+        private event EventHandler insertInventory;
+        public event EventHandler InsertInventory
+        {
+            add { insertInventory += value; }
+            remove { insertInventory -= value; }
+        }
 
         private event EventHandler deleteFood;
         public event EventHandler DeleteFood
@@ -292,14 +322,36 @@ namespace ManageStore
             add { deleteFood += value; }
             remove { deleteFood -= value; }
         }
-
+        private event EventHandler deleteProduct;
+        public event EventHandler DeleteProduct
+        {
+            add { deleteProduct += value; }
+            remove { deleteProduct -= value; }
+        }
+        private event EventHandler deleteInventory;
+        public event EventHandler DeleteInventory
+        {
+            add { deleteInventory += value; }
+            remove { deleteInventory -= value; }
+        }
         private event EventHandler updateFood;
         public event EventHandler UpdateFood
         {
             add { updateFood += value; }
             remove { updateFood -= value; }
         }
-
+        private event EventHandler updateProduct;
+        public event EventHandler UpdateProduct
+        {
+            add { updateProduct += value; }
+            remove { updateProduct -= value; }
+        }
+        private event EventHandler updateInventory;
+        public event EventHandler UpdateInventory
+        {
+            add { updateInventory += value; }
+            remove { updateInventory -= value; }
+        }
 
         private void btnSearchFood_Click(object sender, EventArgs e)
         {
@@ -340,13 +392,82 @@ namespace ManageStore
             ResetPass(userName);
         }
 
-
-
+        private void SearchCus_Click(object sender, EventArgs e)
+        {
+            customerList.DataSource = SearchCustomerByName(tbSearchCus.Text);
+        }
+        private void btnSearchInven_Click(object sender, EventArgs e)
+        {
+            inventoryList.DataSource = SearchInventoryByName(tbSearchInven.Text);
+        }
         #endregion
 
         private void fAdmin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddTable_Click(object sender, EventArgs e)
+        {
+            string name = tbInvName.Text;
+            int staffID = (int)nmIDStaff.Value;     
+            string address = tbInvAdr.Text;
+
+            if (InventoryDAO.Instance.InsertInventory(staffID,name,address))
+            {
+                MessageBox.Show("Thêm thành công");
+                LoadListInventory();
+                if (insertInventory != null)
+                    insertInventory(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi thêm");
+            }
+
+        }
+
+        private void btnEditTable_Click(object sender, EventArgs e)
+        {
+            int id = Int32.Parse(tbInvID.Text);
+            string name = tbInvName.Text;
+            int staffID = (int)nmIDStaff.Value;
+            string address = tbInvAdr.Text;
+
+            if (InventoryDAO.Instance.UpdateInventory(id,staffID, name, address))
+            {
+                MessageBox.Show("Sửa thành công");
+                LoadListInventory();
+                if (updateInventory != null)
+                    updateInventory(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi sửa");
+            }
+
+        }
+
+        private void btnDeleteTable_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(tbInvID.Text);
+
+            if (InventoryDAO.Instance.DeleteInventory(id))
+            {
+                MessageBox.Show("Xóa thành công");
+                LoadListInventory();
+                if (deleteInventory != null)
+                    deleteInventory(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi xóa");
+            }
+        }
+
+        private void btnViewBill_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

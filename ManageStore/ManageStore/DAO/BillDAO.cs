@@ -28,7 +28,7 @@ namespace ManageStore.DAO
         }
         public void CheckOut(int id, /*int discount,*/ float totalPrice)
         {
-            string query = "UPDATE dbo.DONMUA SET NGAYMUA = GETDATE(), TTXEM = 1  WHERE IDKH = " + id;
+            string query = "INsert dbo.DONMUA SET NGAYMUA = GETDATE(), TTXEM = 1  WHERE IDKH = " + id;
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         public void InsertBill(int id)
