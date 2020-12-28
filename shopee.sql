@@ -5,10 +5,17 @@
 
 use master
 go
-
+ 
 create database SHOPEE
 go
-
+/*USE [master]
+GO
+ALTER DATABASE [SHOPEE] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [SHOPEE]
+GO*/
 use SHOPEE
 go
 
@@ -469,7 +476,7 @@ go
 create table CHITIETDG (
    IDDG                 int                  not null,
    IDSP                 int                  not null,
-   SOLUONGGIAO          int                  null
+   SOLUONGGIAO          int                  NOT NULL
 )
 go
 
@@ -495,7 +502,7 @@ go
 create table CHITIETDM (
    IDDM                 int                  not null,
    IDSP                 int                  not null,
-   SOLUONGMUA           int                  null
+   SOLUONGMUA           int                  NOT NULL
 )
 go
 
@@ -573,7 +580,7 @@ go
 /*==============================================================*/
 create table DANHMUC (
    IDDANHMUC            int                  not null,
-   TENDANHMUC           varchar(40)          null,
+   TENDANHMUC           varchar(40)          NOT NULL,
    constraint PK_DANHMUC primary key nonclustered (IDDANHMUC)
 )
 go
@@ -611,8 +618,8 @@ create table DONGIAO (
    IDDM                 int                  not null,
    IDDT                 int                  not null,
    IDKH                 int                  not null,
-   NGAYGIAO             datetime             null,
-   TTGIAO               smallint             null,
+   NGAYGIAO             datetime             NOT NULL,
+   TTGIAO               smallint             NOT NULL,
    constraint PK_DONGIAO primary key nonclustered (IDDG)
 )
 go
@@ -655,7 +662,7 @@ go
 create table DONMUA (
    IDDM                 int                  not null,
    IDKH                 int                  not null,
-   NGAYMUA              datetime             null,
+   NGAYMUA              datetime             NOT NULL,
    TTXEM                tinyint              not null,
    constraint PK_DONMUA primary key nonclustered (IDDM)
 )

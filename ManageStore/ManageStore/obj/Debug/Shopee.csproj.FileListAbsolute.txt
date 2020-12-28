@@ -12,3 +12,17 @@ C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug
 C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\Shopee.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.exe
 C:\Users\ADMIN\Documents\GitHub\academy\SHOPEE\ManageStore\ManageStore\obj\Debug\ManageStore.pdb
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\bin\Debug\ManageStore.exe.config
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\bin\Debug\ManageStore.exe
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\bin\Debug\ManageStore.pdb
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\Shopee.csprojAssemblyReference.cache
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.fAccountProfile.resources
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.fAdmin.resources
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.fLogin.resources
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.fSaler.resources
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.fTableManager.resources
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.Properties.Resources.resources
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\Shopee.csproj.GenerateResource.cache
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\Shopee.csproj.CoreCompileInputs.cache
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.exe
+D:\HK-V_DotChayHetMinh\@CSDL-NC\DoAn2\ManageStore\ManageStore\obj\Debug\ManageStore.pdb
