@@ -22,7 +22,7 @@ namespace ManageStore.DTO
         {
             this.ID = (int)row["id"];
             this.UserName = row["userName"].ToString();
-            this.DisplayName = row["displayName"].ToString();
+            this.DisplayName = row["displayname"].ToString();
             this.Type = (int)row["type"];
             this.Password = row["password"].ToString();
         }
